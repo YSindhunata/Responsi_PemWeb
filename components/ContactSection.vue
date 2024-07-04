@@ -5,7 +5,7 @@
       <ul class="contact-list">
         <li>
           <span class="label">Email:</span>
-          <span>XNOOB@gmail.com</span>
+          <span>ysindhunata@gmail.com</span>
         </li>
         <li>
           <span class="label">Phone:</span>
