@@ -1,5 +1,6 @@
 <template>
   <section id="about" class="about">
+    <div data-aos="zoom-in">
     <h1>About Me</h1>
     <div class="info">
       <p><strong>Full Name:</strong> Yohanes Sindhunata</p>
@@ -8,12 +9,19 @@
       <p><strong>University:</strong> AMIKOM Yogyakarta</p>
       <p><strong>Address:</strong> Klaten, Jawa Tengah, Indonesia</p>
     </div>
+  </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'AboutSection'
+  name: 'AboutSection',
+  mounted() {
+    // Memastikan AOS diinisialisasi setelah komponen dimuat
+    this.$nextTick(() => {
+      this.$AOS.refresh()
+    })
+  }
 }
 </script>
 
@@ -32,15 +40,15 @@ body {
   flex-direction: column;
   justify-content: center; 
   align-items: center; 
-  background-color: black;
+  background: linear-gradient(to right, #764BA2 , #667EEA); 
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: transparent;
 }
 
 .about h1 {
   margin-bottom: 20px;
   font-size: 36px; 
-  color: #00ff00;
+  color:  #04d9ff;
 }
 
 .info {

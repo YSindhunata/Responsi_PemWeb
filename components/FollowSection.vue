@@ -54,7 +54,7 @@
   }
   
   .modal-content {
-    background: black;
+    background: linear-gradient(to right, #764BA2 , #667EEA); 
     padding: 2rem;
     border-radius: 8px;
     width: 300px;

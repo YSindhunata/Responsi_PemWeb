@@ -17,14 +17,14 @@
   
   <style scoped>
   .footer {
-    background-color: black;
+    background: linear-gradient(to right, #764BA2 , #667EEA); 
     color: white;
     padding: 0 15rem;
     display: flex;
     justify-content: center; 
     align-items: center; 
     height: 80px;
-    border-top: 1px #646464 solid;
+    border-top: 1px #f8f5f5 solid;
   }
   
   .footer-content {

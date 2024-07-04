@@ -1,7 +1,7 @@
 <template>
     <div id="skills" class="skill-section">
       <h1>Skills</h1>
-      <div class="skill" v-for="(skill, index) in skills" :key="index">
+      <div data-aos="zoom-in-down"  class="skill" v-for="(skill, index) in skills" :key="index">
         <span>{{ skill.name }} {{ skill.percentage }}%</span>
         <div class="progress">
           <div class="progress-bar" :style="{ width: skill.percentage + '%' }"></div>
@@ -13,6 +13,12 @@
   <script>
   export default {
     name: 'SkillSection',
+    mounted() {
+    // Memastikan AOS diinisialisasi setelah komponen dimuat
+    this.$nextTick(() => {
+      this.$AOS.refresh()
+    })
+  },
     data() {
       return {
         skills: [
@@ -36,13 +42,13 @@
     height: 100vh; 
     margin: 0 auto;
     text-align: center;
-    background-color: black;
+    background: linear-gradient(to right, #764BA2 , #667EEA); 
     padding: 20px; 
   }
   
   h1 {
     margin-bottom: 20px;
-    color: #00ff00;
+    color:  #04d9ff;
   }
   
   .skill {
@@ -71,7 +77,7 @@
   
   .progress-bar {
     height: 100%;
-    background-color: #073907;
+    background-color: #0d62ad;
     border-radius: 10px;
     transition: width 0.4s ease;
   }

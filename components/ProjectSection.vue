@@ -1,7 +1,7 @@
 <template>
-  <div id="projects" class="project-section" style="background-color: black;">
+  <div id="projects" class="project-section" style="background: linear-gradient(to right, #764BA2 , #667EEA); ">
     <h1 class="page-title">My Projects</h1>
-    <div class="project-container">
+    <div data-aos="flip-left" class="project-container">
       <div class="project" v-for="(project, index) in projects" :key="index">
         <img :src="project.image" alt="Project Image">
         <h2>{{ project.title }}</h2>
@@ -17,6 +17,12 @@ import AIImage from '@/assets/AI.jpg';
 import genshinImage from '@/assets/genshin.jpg';
 export default {
   name: 'ProjectSection',
+  mounted() {
+    // Memastikan AOS diinisialisasi setelah komponen dimuat
+    this.$nextTick(() => {
+      this.$AOS.refresh()
+    })
+  },
   data() {
     return {
       projects: [
@@ -52,7 +58,7 @@ export default {
 }
 
 .page-title {
-  color: #00ff00;
+  color:  #04d9ff;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -64,12 +70,12 @@ export default {
 }
 
 .project {
-  background-color: black;
+  background-color: transparent;
   border-radius: 10px;
   margin: 1rem;
   padding: 1rem;
   width: 300px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: transparent;
   text-align: center;
 }
 

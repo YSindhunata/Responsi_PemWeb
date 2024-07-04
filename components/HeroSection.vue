@@ -43,7 +43,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #000;
+  background: linear-gradient(to right, #764BA2 , #667EEA); 
   color: #fff;
 }
 
@@ -53,7 +53,7 @@ export default {
 }
 
 .name {
-  color: #00ff00;
+  color: #04d9ff;
 }
 
 .buttons {
@@ -68,13 +68,13 @@ export default {
 }
 
 .btn-contact {
-  background-color: #00ff00;
-  color: #000;
+  background-color: #0d62ad;
+  color: white;
 }
 
 .btn-follow {
-  background-color: #fff;
-  color: #000;
+  background-color: #0d62ad;
+  color: white;
 }
 
 .hero-image img {

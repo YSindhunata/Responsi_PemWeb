@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .navbar {
-    background-color: black;
+    background: linear-gradient(to right, #764BA2 , #667EEA); 
     position: fixed;
     top: 0;
     width: 100%;
@@ -53,7 +53,7 @@ export default {
 }
 
 .navbar-nav :hover {
-    color: #00ff00;
+    color: #04d9ff;
 }
 
 .custom-margin {
